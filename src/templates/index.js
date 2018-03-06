@@ -1,14 +1,21 @@
 import React from "react";
+import PersonalData from '../components/PersonalData'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data; // data.markdownRemark holds our post data
+  const { markdownRemark , allImageSharp} = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
+  const mainImage = allImageSharp.edges.find(i => i.node.sizes.originalName === frontmatter.image).node
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h2>{frontmatter.date}</h2>
+    <div style={{display: `flex`}}>
+      <PersonalData 
+        image={mainImage}
+        mainColor={frontmatter.mainColor}
+        name={frontmatter.name}
+        jobTitle={frontmatter.jobTitle}
+      />
+      <div style={{flex: `4 0`}}>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -26,11 +33,13 @@ export const pageQuery = graphql`
         name
         jobTitle
         address
+        image
         dateOfBirth(formatString: "MMMM DD, YYYY")
         placeOfBirth
         phoneNumbers
         civilStatus
         email
+        mainColor
         superiorEducation {
             degree
             description
@@ -49,6 +58,25 @@ export const pageQuery = graphql`
             description
             category
             phoneNumber
+        }
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          id
+          sizes {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+          }
         }
       }
     }

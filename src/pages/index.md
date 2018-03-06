@@ -10,6 +10,7 @@ phoneNumbers:
     - 8925 4953
     - 8925 4953
 civilStatus: Soltero
+image: pic.jpg
 email: marcoruiz10@hotmail.com
 superiorEducation:
     - degree: Licenciatura
@@ -108,6 +109,7 @@ references:
       description: Ingeniero Senior BAC CREDOMATIC
       category: personal
       phoneNumber: 8839 4147
+mainColor: "#73c305"
 ---
 Durante el 2013 estuve en Salsas Alfaro como consultor, realizando la tesis, se realizó un estudio de factibilidad técnico y económico para cuadriplicar líneas de producción, así como ser el encargado de crear sistema de control de calidad.
 
