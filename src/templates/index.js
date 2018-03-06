@@ -1,6 +1,7 @@
 import React from "react";
 import ProfilePic from '../components/PersonalData/profilePic'
 import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
+import Info from '../components/PersonalData/Info'
 import styled from 'styled-components'
 
 const PersonalInfo = styled.div`
@@ -29,6 +30,12 @@ export default function Template({
         <PhoneNumbers 
           phoneNumbers={frontmatter.phoneNumbers} 
         />
+        <Info
+          address={frontmatter.address}
+          dateOfBirth={frontmatter.dateOfBirth}
+          placeOfBirth={frontmatter.placeOfBirth}
+          civilStatus={frontmatter.civilStatus}
+        />
       </PersonalInfo>
 
       <div style={{flex: `4 0`}}>
@@ -50,7 +57,7 @@ export const pageQuery = graphql`
         jobTitle
         address
         image
-        dateOfBirth(formatString: "MMMM DD, YYYY")
+        dateOfBirth(formatString: "DD-MM-YYYY")
         placeOfBirth
         phoneNumbers
         civilStatus
