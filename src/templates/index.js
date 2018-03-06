@@ -4,6 +4,7 @@ import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
 import Info from '../components/PersonalData/Info'
 import Email from '../components/PersonalData/Email'
 import Education from '../components/Education'
+import Courses from '../components/Education/Courses'
 import styled from 'styled-components'
 
 const PersonalInfo = styled.div`
@@ -57,6 +58,11 @@ export default function Template({
         <Panel>
           <h2>Educación Superior</h2>
           <Education education={frontmatter.superiorEducation} />
+        </Panel>
+
+        <Panel>
+          <h2>Otros cursos</h2>
+          <Courses courses={frontmatter.otherCourses} />
         </Panel>
       </div>
     </div>

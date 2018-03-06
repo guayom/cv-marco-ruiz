@@ -1,21 +1,20 @@
 import React from 'react'
 import {Item, Title, Institution, Year, Description} from './styles'
 
-function Education({education}){
-  if(!education) {
+function Courses({courses}){
+  if(!courses) {
     return null
   } else {
-    const sortedEducation = education.sort(function (a, b) {
+    const sortedCourses = courses.sort(function (a, b) {
       return a.year - b.year;
     }).reverse()
     return (
       <div>
-        {sortedEducation.map((e, i) => (
+        {sortedCourses.map((e, i) => (
           <Item key={i}>
-            <Year>{e.startingYear}-{e.finishingYear}</Year>
-            <Title>{e.description}</Title>
+            <Year>{e.ongoing ? "Cursando actualmente" : e.year}</Year>
+            <Title>{e.title}</Title>
             <Institution>{e.institution}</Institution>
-            <Description>{e.degree}</Description>
           </Item>
         ))}
       </div>
@@ -23,4 +22,4 @@ function Education({education}){
   }
 }
 
-export default Education
+export default Courses
