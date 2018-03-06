@@ -8,7 +8,7 @@ dateOfBirth: "1991-10-06"
 placeOfBirth: San José Costa Rica
 phoneNumbers:
     - 8925 4953
-    - 8925 4953
+    - 8924 7172
 civilStatus: Soltero
 image: pic.jpg
 email: marcoruiz10@hotmail.com

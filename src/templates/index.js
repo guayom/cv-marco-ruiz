@@ -1,5 +1,14 @@
 import React from "react";
-import PersonalData from '../components/PersonalData'
+import ProfilePic from '../components/PersonalData/profilePic'
+import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
+import styled from 'styled-components'
+
+const PersonalInfo = styled.div`
+    flex: 2 0;
+    background: ${props => props.mainColor};
+    margin-right: 20px;
+    color: #fff;
+`
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,12 +18,19 @@ export default function Template({
   const mainImage = allImageSharp.edges.find(i => i.node.sizes.originalName === frontmatter.image).node
   return (
     <div style={{display: `flex`}}>
-      <PersonalData 
-        image={mainImage}
+      <PersonalInfo
         mainColor={frontmatter.mainColor}
-        name={frontmatter.name}
-        jobTitle={frontmatter.jobTitle}
-      />
+      >
+        <ProfilePic 
+          image={mainImage}
+          name={frontmatter.name}
+          jobTitle={frontmatter.jobTitle}  
+        />
+        <PhoneNumbers 
+          phoneNumbers={frontmatter.phoneNumbers} 
+        />
+      </PersonalInfo>
+
       <div style={{flex: `4 0`}}>
         <div
           className="blog-post-content"
