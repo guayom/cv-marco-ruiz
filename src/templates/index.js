@@ -8,7 +8,6 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
         <div
           className="blog-post-content"
@@ -24,9 +23,33 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
+        name
+        jobTitle
+        address
+        dateOfBirth(formatString: "MMMM DD, YYYY")
+        placeOfBirth
+        phoneNumbers
+        civilStatus
+        email
+        superiorEducation {
+            degree
+            description
+            startingYear
+            finishingYear
+        }
+        otherCourses {
+            title
+            institution
+            year
+            ongoing
+        }
+        otherInfo
+        references{
+            name
+            description
+            category
+            phoneNumber
+        }
       }
     }
   }
