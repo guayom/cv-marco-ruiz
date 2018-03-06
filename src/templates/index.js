@@ -5,6 +5,7 @@ import Info from '../components/PersonalData/Info'
 import Email from '../components/PersonalData/Email'
 import Education from '../components/Education'
 import Courses from '../components/Education/Courses'
+import OtherInfo from '../components/OtherInfo'
 import styled from 'styled-components'
 
 const PersonalInfo = styled.div`
@@ -63,6 +64,11 @@ export default function Template({
         <Panel>
           <h2>Otros cursos</h2>
           <Courses courses={frontmatter.otherCourses} />
+        </Panel>
+
+        <Panel>
+          <h2>Otros datos de Interés:</h2>
+          <OtherInfo items={frontmatter.otherInfo} />
         </Panel>
       </div>
     </div>
