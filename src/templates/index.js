@@ -2,6 +2,8 @@ import React from "react";
 import ProfilePic from '../components/PersonalData/profilePic'
 import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
 import Info from '../components/PersonalData/Info'
+import Email from '../components/PersonalData/Email'
+import Education from '../components/Education'
 import styled from 'styled-components'
 
 const PersonalInfo = styled.div`
@@ -9,6 +11,12 @@ const PersonalInfo = styled.div`
     background: ${props => props.mainColor};
     margin-right: 20px;
     color: #fff;
+`
+
+const Panel = styled.div`
+  background: #fff;
+  padding: 40px;
+  margin-bottom: 20px;
 `
 
 export default function Template({
@@ -27,9 +35,8 @@ export default function Template({
           name={frontmatter.name}
           jobTitle={frontmatter.jobTitle}  
         />
-        <PhoneNumbers 
-          phoneNumbers={frontmatter.phoneNumbers} 
-        />
+        <PhoneNumbers phoneNumbers={frontmatter.phoneNumbers} />
+        <Email email={frontmatter.email} />
         <Info
           address={frontmatter.address}
           dateOfBirth={frontmatter.dateOfBirth}
@@ -39,10 +46,18 @@ export default function Template({
       </PersonalInfo>
 
       <div style={{flex: `4 0`}}>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <Panel>
+          <h2>Experiencia Laboral</h2>
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </Panel>
+
+        <Panel>
+          <h2>Educación Superior</h2>
+          <Education education={frontmatter.superiorEducation} />
+        </Panel>
       </div>
     </div>
   );
@@ -68,6 +83,7 @@ export const pageQuery = graphql`
             description
             startingYear
             finishingYear
+            institution
         }
         otherCourses {
             title

@@ -14,11 +14,13 @@ image: pic.jpg
 email: marcoruiz10@hotmail.com
 superiorEducation:
     - degree: Licenciatura
-      description: Licenciatura en Ingeniería Industrial en la Universidad Hispanoamericana
+      description: Licenciatura en Ingeniería Industrial 
+      institution: Universidad Hispanoamericana
       startingYear: 2010
       finishingYear: 2013
     - degree: Especialidad
-      description: Especialista en administración de proyectos en el TEC 
+      description: Especialista en administración de proyectos
+      institution: TEC 
       startingYear: 2013
       finishingYear: 2014
 otherCourses:
