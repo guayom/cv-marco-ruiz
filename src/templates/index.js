@@ -6,6 +6,7 @@ import Email from '../components/PersonalData/Email'
 import Education from '../components/Education'
 import Courses from '../components/Education/Courses'
 import OtherInfo from '../components/OtherInfo'
+import References from '../components/References'
 import styled from 'styled-components'
 
 const PersonalInfo = styled.div`
@@ -13,12 +14,14 @@ const PersonalInfo = styled.div`
     background: ${props => props.mainColor};
     margin-right: 20px;
     color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 `
 
 const Panel = styled.div`
   background: #fff;
   padding: 40px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 `
 
 export default function Template({
@@ -70,6 +73,13 @@ export default function Template({
           <h2>Otros datos de Interés:</h2>
           <OtherInfo items={frontmatter.otherInfo} />
         </Panel>
+
+        <Panel>
+          <h2>Referencias:</h2>
+          <References references={frontmatter.references} />
+        </Panel>
+
+
       </div>
     </div>
   );
