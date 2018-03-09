@@ -5,7 +5,9 @@ const Item = styled.div`
 `
 
 const Title = styled.h3`
-  margin-bottom: 5px;
+  margin: 0px;
+  font-size: 12pt;
+  line-height: 20pt;
 `
 
 const Institution = styled.p`

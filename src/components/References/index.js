@@ -9,9 +9,9 @@ function References({references}){
       <div>
         {references.map((e, i) => (
           <Item key={i}>
-            {e.name}<br/>
+            <strong>{e.name}</strong><br/>
             {e.description}<br/>
-            <a href={`tel:+506 ${e.phoneNumber}`}>{e.phoneNumber}</a><br/>
+            <a style={{color: `#767270`, textDecoration: `none`}} href={`tel:+506 ${e.phoneNumber}`}>{e.phoneNumber}</a><br/>
           </Item>
         ))}
       </div>

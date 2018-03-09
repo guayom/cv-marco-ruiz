@@ -8,6 +8,7 @@ import Courses from '../components/Education/Courses'
 import OtherInfo from '../components/OtherInfo'
 import References from '../components/References'
 import styled from 'styled-components'
+import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
 
 const PersonalInfo = styled.div`
     flex: 2 0;
@@ -21,8 +22,31 @@ const PersonalInfo = styled.div`
 const Panel = styled.div`
   background: #fff;
   padding: 40px;
-  margin-bottom: 20px;
+  margin-bottom: ${props => props.last ? 0 : `20px`};
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+`
+
+const IconContainer = styled.div`
+  font-size: 2em;
+  color: #767270;
+  padding-top: 10px;
+`
+
+const Title = styled.h2`
+  font-size: 22pt;
+  line-height: 37pt;
+  margin: 0 0 20px;
+  color: #767270;
+`
+
+const PanelContent = styled.div`
+  color: #767270;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 10pt;
+  line-height: 17pt;
 `
 
 export default function Template({
@@ -53,31 +77,56 @@ export default function Template({
 
       <div style={{flex: `4 0`}}>
         <Panel>
-          <h2>Experiencia Laboral</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <IconContainer>
+            <FaGraduationCap />
+          </IconContainer>
+          <PanelContent>
+            <Title>Experiencia Laboral</Title>
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </PanelContent>
         </Panel>
 
         <Panel>
-          <h2>Educación Superior</h2>
-          <Education education={frontmatter.superiorEducation} />
+          <IconContainer>
+            <FaGraduationCap />
+          </IconContainer>
+          <PanelContent>
+            <Title>Educación Superior</Title>
+            <Education education={frontmatter.superiorEducation} />
+          </PanelContent>
         </Panel>
 
         <Panel>
-          <h2>Otros cursos</h2>
-          <Courses courses={frontmatter.otherCourses} />
+          <IconContainer>
+            <FaGraduationCap />
+          </IconContainer>
+          <PanelContent>
+            <Title>Otros cursos</Title>
+            <Courses courses={frontmatter.otherCourses} />
+          </PanelContent>
         </Panel>
 
         <Panel>
-          <h2>Otros datos de Interés:</h2>
-          <OtherInfo items={frontmatter.otherInfo} />
+          <IconContainer>
+            <FaGraduationCap />
+          </IconContainer>
+          <PanelContent>
+            <Title>Otros datos de Interés:</Title>
+            <OtherInfo items={frontmatter.otherInfo} />
+          </PanelContent>
         </Panel>
 
-        <Panel>
-          <h2>Referencias:</h2>
-          <References references={frontmatter.references} />
+        <Panel last>
+          <IconContainer>
+            <FaGraduationCap />
+          </IconContainer>
+          <PanelContent>
+            <Title>Referencias:</Title>
+            <References references={frontmatter.references} />
+          </PanelContent>
         </Panel>
 
 
