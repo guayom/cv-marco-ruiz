@@ -21,8 +21,8 @@ const NameContainer = styled.div`
 
 const Name = styled.h1`
     font-size: 22pt;
-    line-height: 30pt;
-    margin: 0 0 5px;
+    line-height: 27pt;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     display: block;
