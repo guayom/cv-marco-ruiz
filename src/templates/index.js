@@ -9,11 +9,10 @@ import OtherInfo from '../components/OtherInfo'
 import References from '../components/References'
 import styled from 'styled-components'
 import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
+import breakpoint from 'styled-components-breakpoint'
 
 const PersonalInfo = styled.div`
-    flex: 2 0;
     background: ${props => props.mainColor};
-    margin-right: 20px;
     color: #fff;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     font-size: 16px;
@@ -24,8 +23,12 @@ const Panel = styled.div`
   padding: 40px;
   margin-bottom: ${props => props.last ? 0 : `20px`};
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-  display: grid;
-  grid-template-columns: 1fr 7fr;
+  display: block;
+
+  ${breakpoint('tablet')`
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+  `}
 `
 
 const IconContainer = styled.div`
@@ -49,6 +52,16 @@ const PanelContent = styled.div`
   line-height: 17pt;
 `
 
+const MainContainer = styled.div`
+  ${breakpoint('tablet')`
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    margin: 40px auto;
+    max-width: 1100px;
+  `}
+`
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -56,7 +69,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   const mainImage = allImageSharp.edges.find(i => i.node.sizes.originalName === frontmatter.image).node
   return (
-    <div style={{display: `flex`}}>
+    <MainContainer>
       <PersonalInfo
         mainColor={frontmatter.mainColor}
       >
@@ -75,7 +88,7 @@ export default function Template({
         />
       </PersonalInfo>
 
-      <div style={{flex: `4 0`}}>
+      <div>
         <Panel>
           <IconContainer>
             <FaGraduationCap />
@@ -131,7 +144,7 @@ export default function Template({
 
 
       </div>
-    </div>
+    </MainContainer>
   );
 }
 
