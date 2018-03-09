@@ -15,6 +15,7 @@ const PersonalInfo = styled.div`
     margin-right: 20px;
     color: #fff;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    font-size: 16px;
 `
 
 const Panel = styled.div`
