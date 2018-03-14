@@ -1,120 +1,107 @@
 ---
 path: "/"
 title: "Title"
-name: "Marco Ruiz Cartín"
-jobTitle: "Licenciado en Ingeniería Industrial II-27416"
-address: San Luis, Santo domingo de Heredia
-dateOfBirth: "1991-10-06"
-placeOfBirth: San José Costa Rica
+name: "Daniel Artavia Castillo"
+jobTitle: " "
+address: Tibas, San Jose
+dateOfBirth: "1983-01-07"
+id: 1 1160 0268
 phoneNumbers:
-    - 8925 4953
-    - 8924 7172
+    - 6047 5305
+    - 6192 5305
 civilStatus: Soltero
-image: pic.jpg
-email: marcoruiz10@hotmail.com
+image: dani.jpeg
+email: dancarta@gmail.com
 superiorEducation:
-    - degree: Licenciatura
-      description: Licenciatura en Ingeniería Industrial 
-      institution: Universidad Hispanoamericana
-      startingYear: 2010
-      finishingYear: 2013
-    - degree: Especialidad
-      description: Especialista en administración de proyectos
-      institution: TEC 
-      startingYear: 2013
-      finishingYear: 2014
+    - degree: Computer Engineering
+      description: 
+      institution: Universidad Internacional de las Americas. Barrio California
+      startingYear: 2005
+      finishingYear: 2018
+    - degree: Management of Tourism Enterprises
+      description: 
+      institution: Universidad Internacional de las Americas. Barrio California.
+      startingYear: 2001
+      finishingYear: 2018
+    - degree: Secondary graduate in education diversified
+      description: 
+      institution: Colegio Técnico Profesional de Guácimo.
+      startingYear: 2001
+      finishingYear: 2001
+    - degree: Technician Middle in Commercial Secretarial
+      description: 
+      institution: Colegio Técnico Profesional de Guácimo.
+      startingYear: 2001
+      finishingYear: 2001
 otherCourses:
-    - title: Querying Microsoft SQL 2012
-      institution: Universidad CENFOTEC
-      year: 2016
-      ongoing: false
-    - title: Minería de Datos
-      institution: PROMIDAT
-      year: 2016
-      ongoing: false
-    - title: Taller de marketing digital
-      institution: Best marketing talent BMT
-      year: 2017
-      ongoing: false
-    - title: Crear dashboard en excel 2010
-      institution: Cámara de industrias de Costa Rica
-      year: 2015
-      ongoing: false
-    - title: Excel macros con programación en visual basic
-      where: Cámara de industrias de Costa Rica
-      year: 2015
-      ongoing: false
-    - title: English program
-      institution: OBM
-      year: 2009
-      ongoing: false
-    - title: Programación en C++
+    - title: 
       institution: 
-      year: 2018
-      ongoing: true
-otherInfo:
-    - Incorporado al colegio de Ingenieros CFIA.
-    - Dominio de paquetes de cómputo, Excel avanzado, Macros, Visio, Word, Bizagi, Datazen, Tableau.
-    - Creación de indicadores en Excel con VB,
-    - Ingles intermedio 75-80%,
-    - Conocimiento de metodología de administración de proyectos, PMBOOK, Herramientas de gestión de proyectos, conocimiento de iso 9001:2010.
-    - Conocimiento y manejo avanzado en creación de consultas complejas en SQL, extracción y manejo de datos, manejo de SQL Reporting     - Services y PowerBi, As400 Qwery y Siebel,
-    - Conocimiento en Big Data,
-    - Conocimiento en ventas y Marketing Digital,
-    - Manejo y seguimiento de KPIs,
-    - Conocimiento de productos financieros,
-    - Habilidades de análisis, numéricas, estadísticas, facilidad de palabra, capacidad de trabajar bajo presión,
-    - Vehículo propio, licencia de conducir B1
-    - Proactivo, manejo de personal.
-    - Facilidad para la redacción de informes ejecutivos.
-    - Disponibilidad para viajar
-    - Vehículo propio, Licencia B1
-    - Pasaporte y Visa al día.
-references:
-    - name: Lucia Fernández Sáenz
-      description: Gerente General INS
-      category: professional
-      phoneNumber: 8449 3917
-    - name: MBA. José Paulo Martínez Brenes
-      description: Jefe Comercial BAC CREDOMATIC
-      category: professional
-      phoneNumber: 8323 1600
-    - name: MBA. Hannia Jiménez Montenegro
-      description: Jefe de Proyectos, Jefe de Comercialización Digital
-      category: professional
-      phoneNumber: 7070 4951
-    - name: MBA. Luis Salas Herrera
-      description: Jefe de Comercialización Digital
-      category: professional
-      phoneNumber: 7070 8930
-    - name: Ing. Daniel Gómez Altamirano
-      description: Ingeniero Senior BAC CREDOMATIC
-      category: professional
-      phoneNumber: 8880 6285
-    - name: Lic. Karen Chavarria Ureña
-      description: Jefa de Marca Co-Branding
-      category: professional
-      phoneNumber: 7070 9572
-    - name: Eulleny Matarrita
-      description: RRHH BAC CREDOMATIC
-      category: professional
-      phoneNumber: 8328 3902
-    - name: Dra. Priscilla Murillo Chaves
-      description: Fisioterapeuta Docente del INA
-      category: personal
-      phoneNumber: 8322 8157
-    - name: Lic. Jorge Ruiz González
-      description: Bufete Jurídico del Norte
-      category: personal
-      phoneNumber: 8327 1818
-    - name: Ing. Francisco López Fuentes
-      description: Ingeniero Senior BAC CREDOMATIC
-      category: personal
-      phoneNumber: 8839 4147
-mainColor: "#73c305"
----
-Durante el 2013 estuve en Salsas Alfaro como consultor, realizando la tesis, se realizó un estudio de factibilidad técnico y económico para cuadriplicar líneas de producción, así como ser el encargado de crear sistema de control de calidad.
+      year: 
+      ongoing: 
 
-En enero del 2014, empecé labores en la gerencia comercial de BAC CREDOMATIC, Específicamente en el área de Inteligencia de negocios, desempeñándome durante 1 año como Ingeniero Junior, dando seguimiento y control a canales de venta de tarjetas de crédito, después de esto fui promovido como Ingeniero Senior, teniendo mayor responsabilidad en el control de bases de datos, extracción de información y creación de toda la reportería para la subgerencia de Ventas, llevando un seguimiento detallado de los KPI´s del del área, a fin de recomendar acciones preventivas o bien correctivas en el proceso, buscando la mejora continua, un año después fui promovido nuevamente, como Analista de Inteligencia de negocios, con lo cual se me dio la responsabilidad del manejo total de bases de datos, mediante diferentes herramientas, Excel, Tableau, SQL, Datazen, SQL Reporting Services, Power BI, AS400, Siebel entre otros, y siendo el encargado de la automatización de la reporteria total de la gerencia comercial, trayendo un ahorro anual aproximado a los $40.000 - $50.000, en temas de ahorros de tiempo en generación de reportería, así como extracción automática para los diferentes análisis, además de revisar y analizar tendencias de colocación, clusterización, y enfoque en cliente, así como estudios de posibles fraudes, entre otras funciones, Tiempo después se me da la oportunidad de un cambio Horizontal, en la Subgerencia de Digitalización Comercial, igualmente encargado de todo el análisis y manejo de datos, creación de campañas dirigidas en marketing digital, clusterización y segmentación del mercado meta, así como amplia experiencia en proyectos de alto impacto en la gerencia creando y dando el seguimiento a los proyectos del área, en conjunto con otras gerencias a fin de obtener mayor rentabilidad o bien mejorar el uso de las plataformas para el cliente, además de liderar en conjunto de todo el equipo la colocación digital de todos los productos bancarios ofrecidos por la empresa, como Tarjetas, prestamos (Hipotecarios, Prendarios, Leasing, Libranzas), Cuentas de ahorro, entre otros.
+ComputerSkills:
+  - Package Microsoft Windows Professional
+  - Microsoft SQL Server 2008-2016
+  - Filemaker Pro 16, Tableau 10.5
+  - Oracle Siebel CRM, Oracle Sales Cloud
+  - Oracle Policy Automation, Oracle RightNow
+  - Oracle Cloud Service
+  - Oracle Eloqua
+  - Oracle Siebel Email Marketing
+  - Google Analytics
+  - Google Adwords
+  - Kentico
+  - Java
+  - Crystal Reports
+
+EmploymentHistory:
+  - begin: 2016
+    end: 2018
+    company: BAC Credomatic
+    location: Calle Blancos, San José
+    jobDescription: Programmer Analyst, Digital Marketing and CRM
+    responsibilities:
+      - Schedule email sending campaigns(Oracle Siebel Marketing & Oracle Eloqua)
+      - Schedule forms for online sales (Oracle Policy Automation, Oracle RightNow and Kentico )
+      - Schedule data base and sending in campaigns (SQL Server, Oracle Cloud Service, Oracle Sales Cloud and Oracle Siebel CRM)
+      - Analyze and detail the results of the campaigns (Google Analytics)
+  - begin: 2005
+    end: 2016
+    company: BAC Credomatic
+    location: Calle Blancos, San José
+    jobDescription: DBA SQL Server
+    responsibilities:
+      - Coordination of massive shipments with campaigns. 
+      - Massive shipments SMS, TTS and HTML
+      - Loads and database programming
+      - Creation of a database for call center and analyze. (Microsoft SQL Server 2008-2016, Filemaker Pro 16, Tableau 10.5)
+
+skills:
+  - Excellent planning, organizing and executing priorities among many urgent and important things.
+  - Easy adaptation to any work environment
+    
+references:
+    - name: Erick Redondo Martínez
+      description: BAC Credomatic
+      category: profesional
+      phoneNumber: 60590725
+    - name: Hannia Jiménez Montenegro
+      description: BAC Credomatic
+      category: profesional
+      phoneNumber: 70704951
+    - name: Luis Salas Herrera
+      description: BAC Credomatic
+      category: profesional
+      phoneNumber: 70708930
+
+laguages:
+  - title: English
+    level: Fluent
+  - title: German
+    level: 50%
+
+mainColor: "#1abc9c"
+---
+
 
 

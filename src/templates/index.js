@@ -4,6 +4,7 @@ import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
 import Info from '../components/PersonalData/Info'
 import Email from '../components/PersonalData/Email'
 import Education from '../components/Education'
+import EmploymentHistory from '../components/EmploymentHistory'
 import Courses from '../components/Education/Courses'
 import OtherInfo from '../components/OtherInfo'
 import References from '../components/References'
@@ -95,10 +96,7 @@ export default function Template({
           </IconContainer>
           <PanelContent>
             <Title>Experiencia Laboral</Title>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            <EmploymentHistory EmploymentHistory={frontmatter.EmploymentHistory} />
           </PanelContent>
         </Panel>
 
@@ -163,6 +161,14 @@ export const pageQuery = graphql`
         civilStatus
         email
         mainColor
+        EmploymentHistory {
+          begin
+          end
+          company
+          location
+          jobDescription
+          responsibilities
+        }
         superiorEducation {
             degree
             description
