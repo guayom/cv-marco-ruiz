@@ -35,13 +35,13 @@ function Address({address, dateOfBirth, placeOfBirth, civilStatus}){
           <FaUser />
         </Icon>
         <DataList>
-          <dt>Dirección:</dt>
+          <dt>Address:</dt>
           <dd>{address}</dd>
-          <dt>Fecha de nacimiento:</dt>
+          <dt>Date of birth:</dt>
           <dd>{dateOfBirth}</dd>
-          <dt>Lugar de nacimiento:</dt>
+          <dt>Nationality:</dt>
           <dd>{placeOfBirth}</dd>
-          <dt>Estado civil:</dt>
+          <dt>Civil status:</dt>
           <dd>{civilStatus}</dd>
         </DataList>
       </Wrapper>

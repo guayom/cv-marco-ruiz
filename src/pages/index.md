@@ -8,7 +8,7 @@ placeOfBirth: San José Costa Rica
 phoneNumbers:
     - 8871-8989
     - 2271-1918
-civilStatus: Soltero
+civilStatus: Single
 image: pic-leo-2.jpeg
 email: leo.valverde@gmail.com
 
