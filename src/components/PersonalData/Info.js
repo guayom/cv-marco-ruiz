@@ -6,12 +6,14 @@ import styled from 'styled-components'
 const DataList = styled.dl`
   margin: 0;
   padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 
   dt {
     font-size: 13px;
     font-weight: 600;
     line-height: 1em;
     margin: 0 0 5px;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   dd {
@@ -19,6 +21,7 @@ const DataList = styled.dl`
     margin: 0 0 1em;
     line-height: 1em;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 `
 
