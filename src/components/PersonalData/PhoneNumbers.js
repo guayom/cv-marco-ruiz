@@ -18,6 +18,7 @@ function PhoneNumbers({phoneNumbers}){
             </div>
           ))}
         </div>
+        <br/>
       </Wrapper>
     )
   }

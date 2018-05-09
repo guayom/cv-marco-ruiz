@@ -25,6 +25,14 @@ const PersonalInfo = styled.div`
     color: #fff;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     font-size: 16px;
+    overflow:auto
+    padding: 40px;
+
+    h1 {
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
 `
 
 const Panel = styled.div`
@@ -79,23 +87,26 @@ export default function Template({
   const mainImage = allImageSharp.edges.find(i => i.node.sizes.originalName === frontmatter.image).node
   return (
     <MainContainer>
-      <PersonalInfo
-        mainColor={frontmatter.mainColor}
-      >
-        <ProfilePic 
-          image={mainImage}
-          name={frontmatter.name}
-          jobTitle={frontmatter.jobTitle}  
-        />
-        <PhoneNumbers phoneNumbers={frontmatter.phoneNumbers} />
-        <Email email={frontmatter.email} />
-        <Info
-          address={frontmatter.address}
-          dateOfBirth={frontmatter.dateOfBirth}
-          placeOfBirth={frontmatter.placeOfBirth}
-          civilStatus={frontmatter.civilStatus}
-        />
-      </PersonalInfo>
+      <div>
+        <PersonalInfo
+          mainColor={frontmatter.mainColor}
+        >
+          <ProfilePic 
+            image={mainImage}
+            name={frontmatter.name}
+            jobTitle={frontmatter.jobTitle}  
+          />
+          <h1>{frontmatter.name}</h1>
+          <Email email={frontmatter.email} />
+          <PhoneNumbers phoneNumbers={frontmatter.phoneNumbers} />
+          <Info
+            address={frontmatter.address}
+            dateOfBirth={frontmatter.dateOfBirth}
+            placeOfBirth={frontmatter.placeOfBirth}
+            civilStatus={frontmatter.civilStatus}
+          />
+        </PersonalInfo>
+      </div>
 
       <div>
         <Panel>

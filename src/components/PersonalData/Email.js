@@ -14,6 +14,7 @@ function Email({email}){
         <div>
           {email}
         </div>
+        <br />
       </Wrapper>
     )
   }

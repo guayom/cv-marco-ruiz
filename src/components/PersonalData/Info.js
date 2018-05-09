@@ -1,6 +1,26 @@
 import React from 'react'
 import {Wrapper, Icon} from './Wrapper'
 import FaUser from 'react-icons/lib/fa/user'
+import styled from 'styled-components'
+
+const DataList = styled.dl`
+  margin: 0;
+  padding: 0;
+
+  dt {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 0 0 5px;
+  }
+
+  dd {
+    font-size: 15px;
+    margin: 0 0 1em;
+    line-height: 1em;
+    padding: 0;
+  }
+`
 
 function Address({address, dateOfBirth, placeOfBirth, civilStatus}){
   if(!address) {
@@ -11,12 +31,16 @@ function Address({address, dateOfBirth, placeOfBirth, civilStatus}){
         <Icon>
           <FaUser />
         </Icon>
-        <div>
-          <strong>Dirección:</strong><br/>{address}<br/><br/>
-          <strong>Fecha de nacimiento:</strong><br/>{dateOfBirth}<br/><br/>
-          <strong>Lugar de nacimiento:</strong><br/>{placeOfBirth}<br/><br/>
-          <strong>Estado civil:</strong><br/>{civilStatus}
-        </div>
+        <DataList>
+          <dt>Dirección:</dt>
+          <dd>{address}</dd>
+          <dt>Fecha de nacimiento:</dt>
+          <dd>{dateOfBirth}</dd>
+          <dt>Lugar de nacimiento:</dt>
+          <dd>{placeOfBirth}</dd>
+          <dt>Estado civil:</dt>
+          <dd>{civilStatus}</dd>
+        </DataList>
       </Wrapper>
     )
   }
