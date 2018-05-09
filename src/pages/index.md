@@ -9,7 +9,7 @@ phoneNumbers:
     - 8871-8989
     - 2271-1918
 civilStatus: Soltero
-image: pic-leo.jpeg
+image: pic-leo-2.jpeg
 email: leo.valverde@gmail.com
 
 superiorEducation:
