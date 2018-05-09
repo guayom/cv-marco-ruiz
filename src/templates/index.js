@@ -4,12 +4,21 @@ import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
 import Info from '../components/PersonalData/Info'
 import Email from '../components/PersonalData/Email'
 import Education from '../components/Education'
+import Languages from '../components/Languages'
 import Courses from '../components/Education/Courses'
+import Skills from '../components/Skills'
+import Music from '../components/OtherInfo/Music'
 import OtherInfo from '../components/OtherInfo'
 import References from '../components/References'
 import styled from 'styled-components'
-import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
 import breakpoint from 'styled-components-breakpoint'
+
+import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
+import FaCheck from 'react-icons/lib/fa/check'
+import IoBriefcase from 'react-icons/lib/io/briefcase'
+import MdLibraryMusic from 'react-icons/lib/md/library-music'
+import MdSettingsApplications from 'react-icons/lib/md/settings-applications'
+import FaGlobe from 'react-icons/lib/fa/globe'
 
 const PersonalInfo = styled.div`
     background: ${props => props.mainColor};
@@ -91,23 +100,20 @@ export default function Template({
       <div>
         <Panel>
           <IconContainer>
-            <FaGraduationCap />
+            <FaCheck />
           </IconContainer>
           <PanelContent>
-            <Title>Experiencia Laboral</Title>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            <Title>Objective</Title>
+            <div dangerouslySetInnerHTML={{__html: html}} />
           </PanelContent>
         </Panel>
 
         <Panel>
           <IconContainer>
-            <FaGraduationCap />
+            <IoBriefcase />
           </IconContainer>
           <PanelContent>
-            <Title>Educación Superior</Title>
+            <Title>Work experience</Title>
             <Education education={frontmatter.superiorEducation} />
           </PanelContent>
         </Panel>
@@ -117,31 +123,40 @@ export default function Template({
             <FaGraduationCap />
           </IconContainer>
           <PanelContent>
-            <Title>Otros cursos</Title>
-            <Courses courses={frontmatter.otherCourses} />
+            <Title>Superior education</Title>
+            <Education education={frontmatter.superiorEducation} />
           </PanelContent>
         </Panel>
 
         <Panel>
           <IconContainer>
-            <FaGraduationCap />
+            <MdLibraryMusic />
           </IconContainer>
           <PanelContent>
-            <Title>Otros datos de Interés:</Title>
-            <OtherInfo items={frontmatter.otherInfo} />
+            <Title>Music business experience</Title>
+            <Music items={frontmatter.other[0].items} />
+          </PanelContent>
+        </Panel>
+
+        <Panel>
+          <IconContainer>
+            <MdSettingsApplications />
+          </IconContainer>
+          <PanelContent>
+            <Title>Proficient Programs</Title>
+            <Skills skills={frontmatter.skills} />
           </PanelContent>
         </Panel>
 
         <Panel last>
           <IconContainer>
-            <FaGraduationCap />
+            <FaGlobe />
           </IconContainer>
           <PanelContent>
-            <Title>Referencias:</Title>
-            <References references={frontmatter.references} />
+            <Title>Languages</Title>
+            <Languages languages={frontmatter.languages} />
           </PanelContent>
         </Panel>
-
 
       </div>
     </MainContainer>
@@ -154,10 +169,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         name
-        jobTitle
         address
         image
-        dateOfBirth(formatString: "DD-MM-YYYY")
+        dateOfBirth
         placeOfBirth
         phoneNumbers
         civilStatus
@@ -165,23 +179,33 @@ export const pageQuery = graphql`
         mainColor
         superiorEducation {
             degree
-            description
             startingYear
             finishingYear
             institution
         }
-        otherCourses {
-            title
-            institution
-            year
-            ongoing
+        workExperience {
+          startingYear
+          finishingYear
+          jobTitle
+          company
+          address
+          responsibilities
         }
-        otherInfo
-        references{
-            name
+        languages{
+          title
+          level
+        }
+        skills{
+          title
+          level
+        }
+        other{
+          title
+          items{
             description
-            category
-            phoneNumber
+            startingYear
+            finishingYear
+          }
         }
       }
     }
