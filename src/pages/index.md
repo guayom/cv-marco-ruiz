@@ -9,7 +9,7 @@ phoneNumbers:
     - 8871-8989
     - 2271-1918
 civilStatus: Soltero
-image: pic.jpg
+image: pic-leo.jpeg
 email: leo.valverde@gmail.com
 
 superiorEducation:
@@ -128,6 +128,6 @@ skills:
   - title: Avid Pro Tools
     level: Proficient
 
-mainColor: "#00375f"
+mainColor: "#514B49"
 ---
 Thrive my digital marketing career, focusing on the company/client’s program growth by applying strategy and analysis to generate revenue to the parties involved.
