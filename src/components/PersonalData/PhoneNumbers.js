@@ -8,13 +8,10 @@ const PhoneLink = styled.a`
   text-decoration: none;
   display: inline-block;
 
-  &:after {
+  &:before {
     content: "|";
     margin: 0 10px;
-  }
-
-  &:last-of-type:after{
-    display: none;
+    display: ${props => props.first ? 'none' : 'inline-block'};
   }
 `
 
@@ -29,7 +26,7 @@ function PhoneNumbers({phoneNumbers}){
         </Icon>
         <div>
           {phoneNumbers.map((p,i) => (
-            <PhoneLink key={i} href={`tel:+506 ${p}`}>{p}</PhoneLink>
+            <PhoneLink key={i} href={`tel:+506 ${p}`} first={i === 0}>{p}</PhoneLink>
           ))}
         </div>
         <br/>
