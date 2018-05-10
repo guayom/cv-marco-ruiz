@@ -6,7 +6,8 @@ import styled from 'styled-components'
 const PhoneLink = styled.a`
   color: #fff;
   text-decoration: none;
-  
+  display: inline-block;
+
   &:after {
     content: "|";
     margin: 0 10px;
