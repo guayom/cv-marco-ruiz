@@ -23,7 +23,7 @@ import FaGlobe from 'react-icons/lib/fa/globe'
 const PersonalInfo = styled.div`
     background: ${props => props.mainColor};
     color: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: -4px 7px 15px 1px rgba(0,0,0,.2);
     font-size: 16px;
     overflow:auto
     padding: 40px;
@@ -79,6 +79,11 @@ const MainContainer = styled.div`
   `}
 `
 
+const Half = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+`
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -99,12 +104,6 @@ export default function Template({
           <h1>{frontmatter.name}</h1>
           <Email email={frontmatter.email} />
           <PhoneNumbers phoneNumbers={frontmatter.phoneNumbers} />
-          <Info
-            address={frontmatter.address}
-            dateOfBirth={frontmatter.dateOfBirth}
-            placeOfBirth={frontmatter.placeOfBirth}
-            civilStatus={frontmatter.civilStatus}
-          />
         </PersonalInfo>
       </div>
 
@@ -115,7 +114,22 @@ export default function Template({
           </IconContainer>
           <PanelContent>
             <Title>Objective</Title>
-            <div dangerouslySetInnerHTML={{__html: html}} />
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <Half>
+              <div>
+                <h3>Personal Information</h3>
+                <Info
+                  address={frontmatter.address}
+                  dateOfBirth={frontmatter.dateOfBirth}
+                  placeOfBirth={frontmatter.placeOfBirth}
+                  civilStatus={frontmatter.civilStatus}
+                />
+              </div>
+              <div>
+                <h3>Languages</h3>
+                <Languages languages={frontmatter.languages} />
+              </div>
+            </Half>
           </PanelContent>
         </Panel>
 
@@ -149,7 +163,7 @@ export default function Template({
           </PanelContent>
         </Panel>
 
-        <Panel>
+        <Panel last>
           <IconContainer>
             <MdSettingsApplications />
           </IconContainer>
@@ -158,17 +172,6 @@ export default function Template({
             <Skills skills={frontmatter.skills} />
           </PanelContent>
         </Panel>
-
-        <Panel last>
-          <IconContainer>
-            <FaGlobe />
-          </IconContainer>
-          <PanelContent>
-            <Title>Languages</Title>
-            <Languages languages={frontmatter.languages} />
-          </PanelContent>
-        </Panel>
-
       </div>
     </MainContainer>
   );

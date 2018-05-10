@@ -30,21 +30,16 @@ function Address({address, dateOfBirth, placeOfBirth, civilStatus}){
     return null
   } else {
     return (
-      <Wrapper>
-        <Icon>
-          <FaUser />
-        </Icon>
-        <DataList>
-          <dt>Address:</dt>
-          <dd>{address}</dd>
-          <dt>Date of birth:</dt>
-          <dd>{dateOfBirth}</dd>
-          <dt>Nationality:</dt>
-          <dd>{placeOfBirth}</dd>
-          <dt>Civil status:</dt>
-          <dd>{civilStatus}</dd>
-        </DataList>
-      </Wrapper>
+      <DataList>
+        <dt>Address:</dt>
+        <dd>{address}</dd>
+        <dt>Date of birth:</dt>
+        <dd>{dateOfBirth}</dd>
+        <dt>Nationality:</dt>
+        <dd>{placeOfBirth}</dd>
+        <dt>Civil status:</dt>
+        <dd>{civilStatus}</dd>
+      </DataList>
     )
   }
 }

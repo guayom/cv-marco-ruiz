@@ -1,6 +1,21 @@
 import React from 'react'
 import {Wrapper, Icon} from './Wrapper'
 import FaPhone from 'react-icons/lib/fa/phone'
+import styled from 'styled-components'
+
+const PhoneLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  
+  &:after {
+    content: "|";
+    margin: 0 10px;
+  }
+
+  &:last-of-type:after{
+    display: none;
+  }
+`
 
 function PhoneNumbers({phoneNumbers}){
   if(!phoneNumbers) {
@@ -13,9 +28,7 @@ function PhoneNumbers({phoneNumbers}){
         </Icon>
         <div>
           {phoneNumbers.map((p,i) => (
-            <div key={i}>
-              <a style={{color: `#fff`, textDecoration: `none`}} href={`tel:+506 ${p}`}>{p}</a>
-            </div>
+            <PhoneLink key={i} href={`tel:+506 ${p}`}>{p}</PhoneLink>
           ))}
         </div>
         <br/>
