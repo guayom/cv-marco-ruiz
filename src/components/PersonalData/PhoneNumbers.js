@@ -7,10 +7,11 @@ const PhoneLink = styled.a`
   color: #fff;
   text-decoration: none;
   display: inline-block;
+  margin: 0 10px 0 0;
 
   &:before {
     content: "|";
-    margin: 0 10px;
+    margin: 0 10px 0 0;
     display: ${props => props.first ? 'none' : 'inline-block'};
   }
 `
