@@ -7,9 +7,9 @@ import './index.css'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Leonardo Valverde Gonzalez"
+      title="Eduardo Mena"
       meta={[
-        { name: 'description', content: 'Leonardo Valverde Gonzalez professional profile' },
+        { name: 'description', content: 'Eduardo Mena professional profile' },
       ]}
     />
     {children()}

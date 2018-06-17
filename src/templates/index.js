@@ -4,6 +4,7 @@ import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
 import Info from '../components/PersonalData/Info'
 import Email from '../components/PersonalData/Email'
 import Education from '../components/Education'
+import WorkExperience from '../components/Work'
 import Languages from '../components/Languages'
 import Courses from '../components/Education/Courses'
 import Skills from '../components/Skills'
@@ -139,7 +140,10 @@ export default function Template({
           </IconContainer>
           <PanelContent>
             <Title>Work experience</Title>
-            <Education education={frontmatter.superiorEducation} />
+            <WorkExperience
+              workExperience={frontmatter.workExperience}
+              mainColor={frontmatter.mainColor}
+            />
           </PanelContent>
         </Panel>
 
@@ -169,7 +173,7 @@ export default function Template({
           </IconContainer>
           <PanelContent>
             <Title>Proficient Programs</Title>
-            <Skills skills={frontmatter.skills} />
+            <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
           </PanelContent>
         </Panel>
       </div>
