@@ -6,15 +6,14 @@ const Grid = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+`
 
-  & > div {
+const GridChild = Item.extend`
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 48%;
     max-width: 48%;
-  }
 `
-
 const Level = styled.div`
   height: 10px;
   width: 100%;
@@ -40,10 +39,10 @@ function Skills({ skills, mainColor }) {
     return (
       <Grid>
         {skills.map((e, i) => (
-          <Item key={i}>
+          <GridChild key={i}>
             <Title>{e.title}</Title>
             <Level level={e.level} mainColor={mainColor} />
-          </Item>
+          </GridChild>
         ))}
       </Grid>
     )
