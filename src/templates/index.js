@@ -42,11 +42,6 @@ const Panel = styled.div`
   margin-bottom: ${props => props.last ? 0 : `20px`};
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
   display: block;
-
-  ${breakpoint('tablet')`
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-  `}
 `
 
 const IconContainer = styled.div`
@@ -110,9 +105,6 @@ export default function Template({
 
       <div>
         <Panel>
-          <IconContainer>
-            <FaCheck />
-          </IconContainer>
           <PanelContent>
             <Title>Objective</Title>
             <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -135,9 +127,6 @@ export default function Template({
         </Panel>
 
         <Panel>
-          <IconContainer>
-            <IoBriefcase />
-          </IconContainer>
           <PanelContent>
             <Title>Work experience</Title>
             <WorkExperience
@@ -148,9 +137,6 @@ export default function Template({
         </Panel>
 
         <Panel>
-          <IconContainer>
-            <FaGraduationCap />
-          </IconContainer>
           <PanelContent>
             <Title>Superior education</Title>
             <Education education={frontmatter.superiorEducation} />
@@ -158,9 +144,6 @@ export default function Template({
         </Panel>
 
         <Panel>
-          <IconContainer>
-            <MdLibraryMusic />
-          </IconContainer>
           <PanelContent>
             <Title>Music business experience</Title>
             <Music items={frontmatter.other[0].items} />
@@ -168,9 +151,6 @@ export default function Template({
         </Panel>
 
         <Panel last>
-          <IconContainer>
-            <MdSettingsApplications />
-          </IconContainer>
           <PanelContent>
             <Title>Proficient Programs</Title>
             <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
