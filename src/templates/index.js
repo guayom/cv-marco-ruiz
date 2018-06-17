@@ -152,7 +152,7 @@ export default function Template({
 
         <Panel last>
           <PanelContent>
-            <Title>Proficient Programs</Title>
+            <Title>Skills</Title>
             <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
           </PanelContent>
         </Panel>
