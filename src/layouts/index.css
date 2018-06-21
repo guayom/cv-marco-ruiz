@@ -657,3 +657,7 @@ label {
   color: #fff;
   cursor:pointer;
 }
+.thank-you-message {
+	color: #fff;
+	font-size: 2.5em;
+}
