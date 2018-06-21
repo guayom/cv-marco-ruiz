@@ -65,7 +65,7 @@ class Contact extends React.Component {
 		const sent = this.state.sent
     return(
 			<div>
-				{sent === true ? "<h2 className="thank-you-message">Thank you for your message</h2>" : <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} /> } 
+				{sent === true ? "<h2>Thank you for your message</h2>" : <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} /> } 
 			</div>
       )
     }
