@@ -2,6 +2,7 @@ import React from 'react'
 import ProfilePic from './profilePic'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
+import LevelBar from '../LevelBar'
 
 const PersonalInfo = styled.div`
   background: #fff;
@@ -13,11 +14,13 @@ const PersonalInfo = styled.div`
   h1 {
     font-size: 45px;
     margin-bottom: 5px;
+    margin-top: 1em;
   }
 
   h2 {
     font-size: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 1em;
+    font-weight: 400;
   }
 
   p {
@@ -35,7 +38,21 @@ const PersonalInfo = styled.div`
   `}
 `
 
-const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers}) => {
+const DataList = styled.dl`
+  margin-top: 20px;
+
+  dt {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  dd {
+    margin: 0 0 10px;
+    line-height: 1em;
+  }
+`
+
+const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers, languages, address, dateOfBirth, id}) => {
   return (
     <PersonalInfo
       mainColor={mainColor}
@@ -49,6 +66,23 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
       <h2>{jobTitle}</h2>
       <p>{email}</p>
       <p>{phoneNumbers}</p>
+      <br/>
+      {languages.map(language =>
+        <LevelBar
+          label={language.title}
+          level={language.level}
+          levelText={language.levelText}
+          mainColor={mainColor}
+        />
+      )}
+      <DataList>
+        <dt>Address</dt>
+        <dd>{address}</dd>
+        <dt>Date of birth</dt>
+        <dd>{dateOfBirth}</dd>
+        <dt>Id Number</dt>
+        <dd>{id}</dd>
+      </DataList>
     </PersonalInfo>
   )
 }

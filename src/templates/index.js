@@ -47,17 +47,21 @@ export default function Template({
 }) {
   const { markdownRemark , allImageSharp} = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
-  const {name, mainColor, jobTitle, email, phoneNumbers} = frontmatter;
+  const {name, mainColor, jobTitle, email, phoneNumbers, languages, address, dateOfBirth, id} = frontmatter;
   const mainImage = allImageSharp.edges.find(i => i.node.sizes.originalName === frontmatter.image).node
   return (
     <MainContainer>
       <PersonalData 
         name={name} 
-        maincolor={mainColor}
+        mainColor={mainColor}
         mainImage={mainImage}
         jobTitle={jobTitle}
         email={email}
         phoneNumbers={phoneNumbers}
+        id={id}
+        dateOfBirth={dateOfBirth}
+        languages={languages}
+        address={address}
       />
         <Panel>
           <PanelContent>
@@ -119,6 +123,7 @@ export const pageQuery = graphql`
         civilStatus
         email
         mainColor
+        id
         superiorEducation {
             degree
             startingYear
@@ -136,6 +141,7 @@ export const pageQuery = graphql`
         languages{
           title
           level
+          levelText
         }
         skills{
           title

@@ -1,4 +1,5 @@
 ---
+id: 1-1267-0593
 path: "/"
 title: "Title"
 name: Eduardo Mena 
@@ -80,9 +81,11 @@ other:
 
 languages:
   - title: Spanish
-    level: Native
+    level: 100
+    levelText: Native
   - title: English
-    level: Proficient
+    level: 90
+    levelText: Fluent
 
 skills:
   - title: React
