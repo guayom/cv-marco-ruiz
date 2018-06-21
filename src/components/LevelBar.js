@@ -16,19 +16,18 @@ const Label = styled.div`
 const LevelBarContainer = styled.div`
   flex: 0 0 60%;
   height: 1em;
-  background: #a1a1a1;
+  background: #eee;
   position: relative;
   margin: 0 10px;
+`
 
-  &::after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: ${props => props.level}%;
-    top: 0;
-    left: 0;
-    background: ${props => props.mainColor};
-  }
+const Level = styled.div`
+  display: block;
+  height: 100%;
+  width: ${props => props.level}%;
+  top: 0;
+  left: 0;
+  background: ${props => props.mainColor};
 `
 
 const LevelText = styled.div`
@@ -38,6 +37,8 @@ const LevelText = styled.div`
 export default ({level, label, levelText, mainColor}) => 
   <Container>
     <Label>{label}</Label>
-    <LevelBarContainer level={level} mainColor={mainColor} />
+    <LevelBarContainer>
+      <Level mainColor={mainColor} level={level} />
+    </LevelBarContainer>
     <LevelText>{levelText}</LevelText>
   </Container>

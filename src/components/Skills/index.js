@@ -18,22 +18,21 @@ const GridChild = Item.extend`
       max-width: 48%;
     `}
 `
-const Level = styled.div`
+
+const LevelContainer = styled.div`
   height: 10px;
   width: 100%;
   background: #eee;
   position: relative;
+`
 
-  &:after {
-    content: "";
-    width: ${props => props.level}%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: ${props => props.mainColor};
-    display: block;
-  }
+const Level = styled.div`
+  width: ${props => props.level}%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: ${props => props.mainColor};
 `
 
 
@@ -46,7 +45,9 @@ function Skills({ skills, mainColor }) {
         {skills.map((e, i) => (
           <GridChild key={i}>
             <Title>{e.title}</Title>
-            <Level level={e.level} mainColor={mainColor} />
+            <LevelContainer>
+              <Level level={e.level} mainColor={mainColor} />
+            </LevelContainer>
           </GridChild>
         ))}
       </Grid>
