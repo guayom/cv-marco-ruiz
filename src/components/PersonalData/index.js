@@ -54,9 +54,7 @@ const DataList = styled.dl`
 
 const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers, languages, address, dateOfBirth, id}) => {
   return (
-    <PersonalInfo
-      mainColor={mainColor}
-    >
+    <PersonalInfo>
       <ProfilePic 
         image={mainImage}
         name={name}

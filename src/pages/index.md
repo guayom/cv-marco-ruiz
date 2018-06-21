@@ -117,6 +117,6 @@ skills:
   - title: Ruby on rails
     level: 80
 
-mainColor: "#514B49"
+mainColor: "#434b55"
 ---
 Help businesses grow through the development of highly performing websites

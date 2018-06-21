@@ -13,21 +13,19 @@ import PersonalData from '../components/PersonalData'
 
 const Panel = styled.div`
   background: #fff;
-  padding: 40px;
+  padding: 50px;
   margin-bottom: ${props => props.last ? 0 : `20px`};
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-  display: block;
+  border-radius: 8px;
 `
 
 const Title = styled.h2`
   font-size: 22pt;
   line-height: 37pt;
   margin: 0 0 20px;
-  color: #767270;
 `
 
 const PanelContent = styled.div`
-  color: #767270;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 10pt;
@@ -35,6 +33,7 @@ const PanelContent = styled.div`
 `
 
 const MainContainer = styled.div`
+    background: ${props => props.mainColor};
   ${breakpoint('tablet')`
     position: relative;
     margin-left: 350px;
@@ -50,7 +49,7 @@ export default function Template({
   const {name, mainColor, jobTitle, email, phoneNumbers, languages, address, dateOfBirth, id} = frontmatter;
   const mainImage = allImageSharp.edges.find(i => i.node.sizes.originalName === frontmatter.image).node
   return (
-    <MainContainer>
+    <MainContainer mainColor={mainColor}>
       <PersonalData 
         name={name} 
         mainColor={mainColor}
