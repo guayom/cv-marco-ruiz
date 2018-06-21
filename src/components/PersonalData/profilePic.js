@@ -4,13 +4,8 @@ import Img from 'gatsby-image';
 
 
 const ImageContainer = styled.div`
-    position: relative;
     box-sizing: border-box;
-    width: 60%;
-    background: #fff;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 40px;
+    margin-bottom: 20px;
 `
 
 const NameContainer = styled.div`

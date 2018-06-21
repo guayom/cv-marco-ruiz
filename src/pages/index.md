@@ -2,11 +2,12 @@
 path: "/"
 title: "Title"
 name: Eduardo Mena 
+jobTitle: Frontend engineer
 address: Sabana, San José, Costa Rica
 dateOfBirth: 5/2/1986
 placeOfBirth: San José Costa Rica
 phoneNumbers:
-    - 7017-6657
+    - +506 7017-6657
 civilStatus: Single
 image: guayo.jpg
 email: guayo.mena@gmail.com

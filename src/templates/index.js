@@ -1,8 +1,4 @@
 import React from "react";
-import ProfilePic from '../components/PersonalData/profilePic'
-import PhoneNumbers from '../components/PersonalData/PhoneNumbers'
-import Info from '../components/PersonalData/Info'
-import Email from '../components/PersonalData/Email'
 import Education from '../components/Education'
 import WorkExperience from '../components/Work'
 import Languages from '../components/Languages'
@@ -13,28 +9,7 @@ import OtherInfo from '../components/OtherInfo'
 import References from '../components/References'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
-
-import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
-import FaCheck from 'react-icons/lib/fa/check'
-import IoBriefcase from 'react-icons/lib/io/briefcase'
-import MdLibraryMusic from 'react-icons/lib/md/library-music'
-import MdSettingsApplications from 'react-icons/lib/md/settings-applications'
-import FaGlobe from 'react-icons/lib/fa/globe'
-
-const PersonalInfo = styled.div`
-    background: ${props => props.mainColor};
-    color: #fff;
-    box-shadow: -4px 7px 15px 1px rgba(0,0,0,.2);
-    font-size: 16px;
-    overflow:auto
-    padding: 40px;
-
-    h1 {
-      font-size: 22px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-`
+import PersonalData from '../components/PersonalData'
 
 const Panel = styled.div`
   background: #fff;
@@ -42,12 +17,6 @@ const Panel = styled.div`
   margin-bottom: ${props => props.last ? 0 : `20px`};
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
   display: block;
-`
-
-const IconContainer = styled.div`
-  font-size: 2em;
-  color: #767270;
-  padding-top: 10px;
 `
 
 const Title = styled.h2`
@@ -67,17 +36,10 @@ const PanelContent = styled.div`
 
 const MainContainer = styled.div`
   ${breakpoint('tablet')`
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 20px;
-    margin: 40px auto;
-    max-width: 1100px;
+    position: relative;
+    margin-left: 350px;
+    padding: 30px;
   `}
-`
-
-const Half = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 `
 
 export default function Template({
@@ -85,44 +47,26 @@ export default function Template({
 }) {
   const { markdownRemark , allImageSharp} = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
+  const {name, mainColor, jobTitle, email, phoneNumbers} = frontmatter;
   const mainImage = allImageSharp.edges.find(i => i.node.sizes.originalName === frontmatter.image).node
   return (
     <MainContainer>
-      <div>
-        <PersonalInfo
-          mainColor={frontmatter.mainColor}
-        >
-          <ProfilePic 
-            image={mainImage}
-            name={frontmatter.name}
-            jobTitle={frontmatter.jobTitle}  
-          />
-          <h1>{frontmatter.name}</h1>
-          <Email email={frontmatter.email} />
-          <PhoneNumbers phoneNumbers={frontmatter.phoneNumbers} />
-        </PersonalInfo>
-      </div>
-
-      <div>
+      <PersonalData 
+        name={name} 
+        maincolor={mainColor}
+        mainImage={mainImage}
+        jobTitle={jobTitle}
+        email={email}
+        phoneNumbers={phoneNumbers}
+      />
         <Panel>
           <PanelContent>
             <Title>Objective</Title>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <Half>
-              <div>
-                <h3>Personal Information</h3>
-                <Info
-                  address={frontmatter.address}
-                  dateOfBirth={frontmatter.dateOfBirth}
-                  placeOfBirth={frontmatter.placeOfBirth}
-                  civilStatus={frontmatter.civilStatus}
-                />
-              </div>
-              <div>
-                <h3>Languages</h3>
-                <Languages languages={frontmatter.languages} />
-              </div>
-            </Half>
+            <div>
+              <h3>Languages</h3>
+              <Languages languages={frontmatter.languages} />
+            </div>
           </PanelContent>
         </Panel>
 
@@ -156,7 +100,6 @@ export default function Template({
             <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
           </PanelContent>
         </Panel>
-      </div>
     </MainContainer>
   );
 }
@@ -168,6 +111,7 @@ export const pageQuery = graphql`
       frontmatter {
         name
         address
+        jobTitle
         image
         dateOfBirth
         placeOfBirth
