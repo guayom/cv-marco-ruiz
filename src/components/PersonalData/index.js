@@ -5,9 +5,10 @@ import breakpoint from 'styled-components-breakpoint'
 
 const PersonalInfo = styled.div`
   background: #fff;
-  box-shadow: -4px 7px 15px 1px rgba(0,0,0,.2);
+  box-shadow: 1px 1px 15px 1px rgba(0,0,0,.2);
   font-size: 16px;
   overflow:auto
+  padding: 30px;
 
   h1 {
     font-size: 45px;
@@ -25,9 +26,10 @@ const PersonalInfo = styled.div`
 
   ${breakpoint('tablet')`
     width: 350px;
-    height: 100vh;
+    height: calc(100vh + 120px);
+    padding-top: 60px;
     position: fixed;
-    top: 0;
+    top: -40px;
     left: 0;
     bottom :0;
   `}
@@ -43,12 +45,10 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
         name={name}
         jobTitle={jobTitle}  
       />
-      <div style={{margin: '30px'}}>
-        <h1>{name}</h1>
-        <h2>{jobTitle}</h2>
-        <p>{email}</p>
-        <p>{phoneNumbers}</p>
-      </div>
+      <h1>{name}</h1>
+      <h2>{jobTitle}</h2>
+      <p>{email}</p>
+      <p>{phoneNumbers}</p>
     </PersonalInfo>
   )
 }
