@@ -66,10 +66,6 @@ export default function Template({
           <PanelContent>
             <Title>Objective</Title>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <div>
-              <h3>Languages</h3>
-              <Languages languages={frontmatter.languages} />
-            </div>
           </PanelContent>
         </Panel>
 
