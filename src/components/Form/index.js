@@ -17,13 +17,13 @@ const Form = ({handleSubmit, handleChange}) => (
 	>
 		<h2>Contact me</h2>
 		<input type="hidden" name="form-name" value="contact" />
-		<input className="nbf" name="subject" type="text"/>
+		<input className="nbf" name="subject" type="text" onChange={handleChange}/>
 		<label for="name">Name:</label>
-		<input type="text" name="name" id="name" />
+		<input type="text" name="name" id="name" onChange={handleChange} />
 		<label for="email">Email:</label>
-		<input type="text" name="email" id="email" />
+		<input type="text" name="email" id="email" onChange={handleChange} />
 		<label for="message">Message:</label>
-		<textarea name="message" id="message" />
+		<textarea name="message" id="message" onChange={handleChange} />
 		<button type="submit" className="cta">Send</button>
 	</form>
 )
@@ -64,7 +64,7 @@ class Contact extends React.Component {
 		const sent = this.state.sent
     return(
 			<div>
-				{sent === true ? "<h2>Thank you for your message</h2>" : <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} /> } 
+				{sent === true ? "<h2 className="thank-you-message">Thank you for your message</h2>" : <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} /> } 
 			</div>
       )
     }
