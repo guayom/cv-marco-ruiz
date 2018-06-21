@@ -20,7 +20,7 @@ const LevelBarContainer = styled.div`
   position: relative;
   margin: 0 10px;
 
-  &:after {
+  &::after {
     content: "";
     display: block;
     height: 100%;
