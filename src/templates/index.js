@@ -155,7 +155,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          sizes {
+          sizes(maxWidth: 300, maxHeight: 300) {
             base64
             tracedSVG
             aspectRatio
