@@ -35,6 +35,7 @@ class Contact extends React.Component {
 			sent: false
 		}
 		this.showSuccessMessage = this.showSuccessMessage.bind(this);
+		this.handleChange = this.handleChange.bind(this);
   }
 
 	handleChange = e => {
