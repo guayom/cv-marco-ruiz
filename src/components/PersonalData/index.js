@@ -64,6 +64,7 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
       <h2>{jobTitle}</h2>
       <p>{email}</p>
       <p>{phoneNumbers}</p>
+      <a href="#contact" className="cta">Contact Me</a>
       <br/>
       {languages.map(language =>
         <LevelBar

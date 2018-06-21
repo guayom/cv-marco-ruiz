@@ -617,3 +617,43 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.nbf {
+  display: none;
+}
+
+/*Form*/
+form {
+  width: 600px;
+  margin: 40px;
+}
+input[type=text], textarea {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+textarea {
+  display: block;
+}
+label {
+  display: block;
+  color: #fff;
+}
+.cta {
+  border: 0;
+  border-radius: 5px;
+  background: yellow;
+  color: red;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.3em;
+  min-width: 200px;
+  transition: all .5s ease;
+  cursor:pointer;
+}
+.cta:hover {
+  background: blue;
+  color: #fff;
+  cursor:pointer;
+}

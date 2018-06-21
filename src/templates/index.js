@@ -10,6 +10,7 @@ import References from '../components/References'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 import PersonalData from '../components/PersonalData'
+import Form from '../components/Form'
 
 const Panel = styled.div`
   background: #fff;
@@ -109,6 +110,8 @@ export default function Template({
             <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
           </PanelContent>
         </Panel>
+
+        <Form />
     </MainContainer>
   );
 }
