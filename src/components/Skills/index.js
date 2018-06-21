@@ -1,6 +1,7 @@
 import React from 'react'
 import { Item, Title, Description } from '../Education/styles'
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 
 const Grid = styled.div`
   display: flex;
@@ -11,8 +12,11 @@ const Grid = styled.div`
 const GridChild = Item.extend`
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 48%;
-    max-width: 48%;
+    flex-basis: 100%;
+    ${breakpoint('tablet')`
+      flex-basis: 48%;
+      max-width: 48%;
+    `}
 `
 const Level = styled.div`
   height: 10px;
@@ -28,6 +32,7 @@ const Level = styled.div`
     top: 0;
     left: 0;
     background: ${props => props.mainColor};
+    display: block;
   }
 `
 
