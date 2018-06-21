@@ -13,10 +13,19 @@ import PersonalData from '../components/PersonalData'
 
 const Panel = styled.div`
   background: #fff;
-  padding: 50px;
-  margin-bottom: ${props => props.last ? 0 : `20px`};
+  padding: 30px;
+  margin: 10px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
   border-radius: 8px;
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+
+  ${breakpoint('tablet')`
+    padding: 50px;
+    margin-bottom: ${props => props.last ? 0 : `20px`};
+  `}
 `
 
 const Title = styled.h2`
@@ -34,6 +43,7 @@ const PanelContent = styled.div`
 
 const MainContainer = styled.div`
     background: ${props => props.mainColor};
+    overflow: auto;
   ${breakpoint('tablet')`
     position: relative;
     margin-left: 350px;
