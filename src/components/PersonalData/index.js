@@ -3,6 +3,7 @@ import ProfilePic from './profilePic'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 import LevelBar from '../LevelBar'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const PersonalInfo = styled.div`
   background: #fff;
@@ -64,7 +65,7 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
       <h2>{jobTitle}</h2>
       <p>{email}</p>
       <p>{phoneNumbers}</p>
-      <a href="#contact" className="cta">Contact Me</a>
+      <AnchorLink href='#contact' className="cta">Contact Me</AnchorLink>
       <br/>
       {languages.map(language =>
         <LevelBar

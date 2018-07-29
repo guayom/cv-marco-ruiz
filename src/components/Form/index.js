@@ -6,6 +6,13 @@ function encode(data) {
     .join("&");
 }
 
+const ThankYouMessage = () => (
+	<div className='thank-you-message'>
+		<h2>Thank you for your message</h2>
+		<p>I'll be in contact soon</p>
+	</div>
+)
+
 const Form = ({handleSubmit, handleChange}) => (
 	<form 
 		id="contact" 
@@ -65,7 +72,7 @@ class Contact extends React.Component {
 		const sent = this.state.sent
     return(
 			<div>
-				{sent === true ? "<h2>Thank you for your message</h2>" : <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} /> } 
+				{sent === true ? <ThankYouMessage /> : <Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} /> } 
 			</div>
       )
     }
