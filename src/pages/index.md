@@ -68,7 +68,7 @@ workExperience:
     address: San José, Costa Rica
     responsibilities:
       - Increased product sales through design and development of marketing micro-sites
-      - Increased conversion rate of the corporate website through CRO and design
+      - Increased conversion rate of the corporate website through CRO, UX research and design
       - Increased insurance sales trough redesign of our e-commerce website
       - Created tools to automate internal processes, saving hundres of work hours and high costs of outsourcing
 

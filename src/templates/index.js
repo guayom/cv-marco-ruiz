@@ -43,7 +43,10 @@ const PanelContent = styled.div`
 `
 
 const MainContainer = styled.div`
-    background: ${props => props.mainColor};
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     overflow: auto;
   ${breakpoint('tablet')`
     position: relative;
