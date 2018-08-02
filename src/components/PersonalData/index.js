@@ -8,7 +8,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 const PersonalInfo = styled.div`
   font-size: 16px;
   overflow:auto
-  padding: 30px 60px;
+  padding: 30px;
 
   h1 {
     font-size: 37px;
@@ -28,19 +28,16 @@ const PersonalInfo = styled.div`
   }
 
   ${breakpoint('tablet')`
+    padding: 30px 60px;
     width: 350px;
-    height: calc(100vh + 120px);
-    padding-top: 60px;
+    height: 100vh;
     position: fixed;
-    top: -40px;
     left: 0;
     bottom :0;
   `}
 `
 
 const DataList = styled.dl`
-  margin-top: 20px;
-
   dt {
     font-size: 0.7rem;
     margin: 0;
@@ -62,19 +59,19 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
       />
       <h1>{name}</h1>
       <h2>{jobTitle}</h2>
+
+      <AnchorLink href='#contact' className="cta">Contact Me</AnchorLink>
+
+      <br/>
       <p>{email}</p>
       <p>{phoneNumbers}</p>
-      <AnchorLink href='#contact' className="cta">Contact Me</AnchorLink>
-      <br/>
-      {languages.map(language =>
-        <LevelBar
-          label={language.title}
-          level={language.level}
-          levelText={language.levelText}
-          mainColor={mainColor}
-        />
-      )}
       <DataList>
+        <dt>Languages</dt>
+        <dd>
+          {languages.map(language =>
+            <p>{language.title}, {language.levelText}</p>
+          )}
+        </dd>
         <dt>Address</dt>
         <dd>{address}</dd>
         <dt>Date of birth</dt>
