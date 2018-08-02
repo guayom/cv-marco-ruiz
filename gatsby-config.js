@@ -36,7 +36,7 @@ module.exports = {
         logo: "./src/favicon.png",
 
         // WebApp Manifest Configuration
-        appName: 'Gatsby site',
+        appName: 'Eduardo Mena CV',
         appDescription: null,
         developerName: null,
         developerURL: null,
@@ -62,6 +62,6 @@ module.exports = {
           windows: false
         }
       }
-    }
+    },
   ],
 };
