@@ -1,7 +1,11 @@
 import React from 'react'
-import { Item, Title, Description } from '../Education/styles'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
+
+const colors = {
+  primary: '#92b656',
+  secondary: '#e9dd57',
+}
 
 const Grid = styled.div`
   display: flex;
@@ -9,10 +13,12 @@ const Grid = styled.div`
   justify-content: space-between;
 `
 
-const GridChild = Item.extend`
+const GridChild = styled.div`
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 100%;
+    margin-bottom: 30px;
+
     ${breakpoint('tablet')`
       flex-basis: 48%;
       max-width: 48%;
@@ -20,21 +26,58 @@ const GridChild = Item.extend`
 `
 
 const LevelContainer = styled.div`
-  height: 10px;
   width: 100%;
-  background: #eee;
+  background: linear-gradient(to right, ${colors.primary}, ${colors.secondary});
   position: relative;
+  height: 40px;
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
 `
 
 const Level = styled.div`
   width: ${props => props.level}%;
   height: 100%;
+  background: transparent;
+  flex: 0 0 ${props => props.level}%;
+  position: relative;
+
+  &:after {
+    content: "${props => props.level}%";
+    position: absolute;
+    right: 5px;
+    font-size: 16px;
+    height: 100%;
+    display flex;
+    align-items: center;
+  }
+
+  ${breakpoint('tablet')`
+    &:after {
+      font-size: 12px;
+    }
+  `}
+`
+
+const Title = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: ${props => props.mainColor};
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  align-items: center;
 `
 
+const Mask = styled.div`
+  height: 100%;
+  background: #f0f0f0;
+  flex: 1 1;
+  box-shadow: inset 2px 2px 8px 0px rgba(0,0,0,0.3);
+`
 
 function Skills({ skills, mainColor }) {
   if (!skills) {
@@ -44,9 +87,10 @@ function Skills({ skills, mainColor }) {
       <Grid>
         {skills.map((e, i) => (
           <GridChild key={i}>
-            <Title>{e.title}</Title>
             <LevelContainer>
+              <Title>{e.title}</Title>
               <Level level={e.level} mainColor={mainColor} />
+              <Mask />
             </LevelContainer>
           </GridChild>
         ))}
