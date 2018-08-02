@@ -29,7 +29,7 @@ const LevelContainer = styled.div`
   width: 100%;
   background: linear-gradient(to right, ${colors.primary}, ${colors.secondary});
   position: relative;
-  height: 40px;
+  height: 32px;
   display: flex;
   border-radius: 4px;
   overflow: hidden;
@@ -66,7 +66,7 @@ const Title = styled.div`
   bottom: 0;
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
   color: #fff;
   font-size: 16px;
   align-items: center;
