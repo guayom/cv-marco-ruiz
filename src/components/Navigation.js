@@ -35,6 +35,7 @@ const Menu = styled.nav`
     a {
       text-decoration: none;
       color: #464650;
+      font-size: 14px;
     }
   `}
 `

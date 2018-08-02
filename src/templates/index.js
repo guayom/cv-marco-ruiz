@@ -23,7 +23,7 @@ const PanelsContainer = styled.div`
     overflow: auto;
     position: relative;
     margin-left: 350px;
-    padding: 80px 60px 30px 30px;
+    padding: 65px 60px 30px 30px;
   `}
 `
 
