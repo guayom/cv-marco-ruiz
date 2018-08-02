@@ -6,16 +6,15 @@ import LevelBar from '../LevelBar'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const PersonalInfo = styled.div`
-  background: #fff;
-  box-shadow: 1px 1px 15px 1px rgba(0,0,0,.2);
   font-size: 16px;
   overflow:auto
-  padding: 30px;
+  padding: 30px 60px;
 
   h1 {
-    font-size: 45px;
+    font-size: 37px;
     margin-bottom: 5px;
     margin-top: 1em;
+    text-transform: uppercase;
   }
 
   h2 {

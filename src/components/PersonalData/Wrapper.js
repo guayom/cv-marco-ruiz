@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 `
 
 const Icon = styled.div`

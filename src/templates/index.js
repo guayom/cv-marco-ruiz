@@ -14,44 +14,45 @@ import Form from '../components/Form'
 
 const Panel = styled.div`
   background: #fff;
-  padding: 30px;
   margin: 10px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-  border-radius: 8px;
+  box-shadow: 0 4px 35px 0 rgba(23,55,87,.1), 0 5px 15px 0 rgba(0,0,0,.07);
+  border-radius: 4px;
+  overflow: hidden;
 
   &:last-of-type {
     margin-bottom: 30px;
   }
 
   ${breakpoint('tablet')`
-    padding: 50px;
-    margin-bottom: ${props => props.last ? 0 : `20px`};
+    margin-bottom: ${props => props.last ? 0 : `10px`};
   `}
 `
 
 const Title = styled.h2`
-  font-size: 22pt;
-  line-height: 37pt;
-  margin: 0 0 20px;
+  font-size: 16px;
+  margin: 0;
+  text-transform: uppercase;
+  background: #464650;
+  padding: 10px 30px;
+  color: #fff;
 `
 
 const PanelContent = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 10pt;
+  font-size: 15px;
   line-height: 17pt;
+  letter-spacing: .05em;
+  font-weight: 300;
+  padding: 30px;
 `
 
 const MainContainer = styled.div`
-  background: #283048;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   overflow: auto;
   ${breakpoint('tablet')`
     position: relative;
     margin-left: 350px;
-    padding: 30px;
+    padding: 30px 60px 30px 30px;
   `}
 `
 
@@ -77,15 +78,15 @@ export default function Template({
         address={address}
       />
         <Panel>
+          <Title>Objective</Title>
           <PanelContent>
-            <Title>Objective</Title>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </PanelContent>
         </Panel>
 
         <Panel>
+          <Title>Work experience</Title>
           <PanelContent>
-            <Title>Work experience</Title>
             <WorkExperience
               workExperience={frontmatter.workExperience}
               mainColor={frontmatter.mainColor}
@@ -94,27 +95,33 @@ export default function Template({
         </Panel>
 
         <Panel>
+          <Title>Superior education</Title>
           <PanelContent>
-            <Title>Superior education</Title>
             <Education education={frontmatter.superiorEducation} />
           </PanelContent>
         </Panel>
 
         <Panel>
+          <Title>Music business experience</Title>
           <PanelContent>
-            <Title>Music business experience</Title>
             <Music items={frontmatter.other[0].items} />
           </PanelContent>
         </Panel>
 
-        <Panel last>
+        <Panel>
+          <Title>Skills</Title>
           <PanelContent>
-            <Title>Skills</Title>
             <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
           </PanelContent>
         </Panel>
 
-        <Form />
+        <Panel last>
+          <Title>Contact me</Title>
+          <PanelContent>
+            <Form />
+          </PanelContent>
+        </Panel>
+
     </MainContainer>
   );
 }

@@ -22,7 +22,6 @@ const Form = ({handleSubmit, handleChange}) => (
 		data-netlify-honeypot="subject"
 		onSubmit={handleSubmit}
 	>
-		<h2>Contact me</h2>
 		<input type="hidden" name="form-name" value="contact" />
 		<input className="nbf" name="subject" type="text" onChange={handleChange}/>
 		<label for="name">Name:</label>
