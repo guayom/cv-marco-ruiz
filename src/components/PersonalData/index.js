@@ -67,8 +67,8 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
       <DataList>
         <dt>Languages</dt>
         <dd>
-          {languages.map(language =>
-            <p>{language.title}, {language.levelText}</p>
+          {languages.map((language, i) =>
+            <p key={i}>{language.title}, {language.levelText}</p>
           )}
         </dd>
         <dt>Address</dt>
