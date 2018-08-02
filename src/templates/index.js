@@ -27,6 +27,18 @@ const PanelsContainer = styled.div`
   `}
 `
 
+const Objective = styled.div`
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+  padding: 20px;
+  background: #f0f0f0;
+
+  strong {
+    display: block;
+  }
+`
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -53,7 +65,8 @@ export default function Template({
     
         <Navigation />
 
-        <Panel title="Objective" id="objective">
+        <Panel title="About Me" id="about">
+          <Objective><strong>Objective: </strong>{frontmatter.objective}</Objective>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </Panel>
 
@@ -102,6 +115,7 @@ export const pageQuery = graphql`
         email
         mainColor
         id
+        objective
         superiorEducation {
             degree
             startingYear

@@ -118,5 +118,13 @@ skills:
     level: 80
 
 mainColor: "#434b55"
+
+objective: Help businesses grow through the development of highly performing websites.
+
 ---
-Help businesses grow through the development of highly performing websites
+
+Since I first started learning about html and css in highschool, more than 15 yers ago, I got immediately hooked. Developing websites is one of my passions, specially when there's a challenge, like increasing performance or getting more sales.
+
+For the last 3 years, I've been very focused in building **static websites and progressive web apps**. On my current job, at one of the largest banks in Central America, we've seen how using this approach, increases speed of development, performance and also gives us more freedom to experiment and get results faster.
+
+I also enjoy automating processes and letting computers do repetitive tasks for me. This way, I've saved countless ours of work for me and my co-workers, and we've been able to focus on more important things that generate value to our company.

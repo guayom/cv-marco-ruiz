@@ -50,7 +50,7 @@ class Navigation extends React.Component {
     return (
       <Menu>
         <ul>
-          <li><AnchorLink href='#objective' offset='70'>Objective</AnchorLink></li>
+          <li><AnchorLink href='#about' offset='70'>About me</AnchorLink></li>
           <li><AnchorLink href='#work' offset='70'>Work</AnchorLink></li>
           <li><AnchorLink href='#education' offset='70'>Education</AnchorLink></li>
           <li><AnchorLink href='#music' offset='70'>Music</AnchorLink></li>
