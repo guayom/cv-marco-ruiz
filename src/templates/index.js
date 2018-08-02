@@ -12,13 +12,18 @@ import breakpoint from 'styled-components-breakpoint'
 import PersonalData from '../components/PersonalData'
 import Form from '../components/Form'
 import Panel from '../components/Panel'
+import Navigation from '../components/Navigation'
 
 const MainContainer = styled.div`
   overflow: auto;
+`
+
+const PanelsContainer = styled.div`
   ${breakpoint('tablet')`
+    overflow: auto;
     position: relative;
     margin-left: 350px;
-    padding: 30px 60px 30px 30px;
+    padding: 80px 60px 30px 30px;
   `}
 `
 
@@ -43,32 +48,39 @@ export default function Template({
         languages={languages}
         address={address}
       />
-        <Panel title="Objective">
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+
+      <PanelsContainer>
+    
+        <Navigation />
+
+        <Panel title="Objective" id="objective">
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </Panel>
 
-        <Panel title="Work experience">
+        <Panel title="Work experience" id="work">
           <WorkExperience
             workExperience={frontmatter.workExperience}
             mainColor={frontmatter.mainColor}
           />
         </Panel>
 
-        <Panel title="Superior education">
+        <Panel title="Superior education" id="education">
           <Education education={frontmatter.superiorEducation} />
         </Panel>
 
-        <Panel title="Music business experience">
+        <Panel title="Music business experience" id="music">
           <Music items={frontmatter.other[0].items} />
         </Panel>
 
-        <Panel title="Skills">
+        <Panel title="Skills" id="skills">
           <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
         </Panel>
 
-        <Panel title="Contact me" last>
+        <Panel title="Contact me" id="contact" last>
           <Form />
         </Panel>
+
+      </PanelsContainer>
 
     </MainContainer>
   );

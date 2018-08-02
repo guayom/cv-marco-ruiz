@@ -37,8 +37,8 @@ const PanelContent = styled.div`
   padding: 30px;
 `
 
-const Panel = ({title, children, last}) => (
-  <PanelContainer last={last}>
+const Panel = ({title, children, last, id}) => (
+  <PanelContainer last={last} id={id}>
     <Title>{title}</Title>
     <PanelContent>
       {children}
