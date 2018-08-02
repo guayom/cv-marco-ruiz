@@ -24,11 +24,11 @@ const Form = ({handleSubmit, handleChange}) => (
 	>
 		<input type="hidden" name="form-name" value="contact" />
 		<input className="nbf" name="subject" type="text" onChange={handleChange}/>
-		<label for="name">Name:</label>
+		<label htmlFor="name">Name:</label>
 		<input type="text" name="name" id="name" onChange={handleChange} />
-		<label for="email">Email:</label>
+		<label htmlFor="email">Email:</label>
 		<input type="text" name="email" id="email" onChange={handleChange} />
-		<label for="message">Message:</label>
+		<label htmlFor="message">Message:</label>
 		<textarea name="message" id="message" onChange={handleChange} />
 		<button type="submit" className="cta">Send</button>
 	</form>
