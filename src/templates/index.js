@@ -11,41 +11,7 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 import PersonalData from '../components/PersonalData'
 import Form from '../components/Form'
-
-const Panel = styled.div`
-  background: #fff;
-  margin: 10px;
-  box-shadow: 0 4px 35px 0 rgba(23,55,87,.1), 0 5px 15px 0 rgba(0,0,0,.07);
-  border-radius: 4px;
-  overflow: hidden;
-
-  &:last-of-type {
-    margin-bottom: 30px;
-  }
-
-  ${breakpoint('tablet')`
-    margin-bottom: ${props => props.last ? 0 : `10px`};
-  `}
-`
-
-const Title = styled.h2`
-  font-size: 16px;
-  margin: 0;
-  text-transform: uppercase;
-  background: #464650;
-  padding: 10px 30px;
-  color: #fff;
-`
-
-const PanelContent = styled.div`
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 17pt;
-  letter-spacing: .05em;
-  font-weight: 300;
-  padding: 30px;
-`
+import Panel from '../components/Panel'
 
 const MainContainer = styled.div`
   overflow: auto;
@@ -77,49 +43,31 @@ export default function Template({
         languages={languages}
         address={address}
       />
-        <Panel>
-          <Title>Objective</Title>
-          <PanelContent>
+        <Panel title="Objective">
             <div dangerouslySetInnerHTML={{ __html: html }} />
-          </PanelContent>
         </Panel>
 
-        <Panel>
-          <Title>Work experience</Title>
-          <PanelContent>
-            <WorkExperience
-              workExperience={frontmatter.workExperience}
-              mainColor={frontmatter.mainColor}
-            />
-          </PanelContent>
+        <Panel title="Work experience">
+          <WorkExperience
+            workExperience={frontmatter.workExperience}
+            mainColor={frontmatter.mainColor}
+          />
         </Panel>
 
-        <Panel>
-          <Title>Superior education</Title>
-          <PanelContent>
-            <Education education={frontmatter.superiorEducation} />
-          </PanelContent>
+        <Panel title="Superior education">
+          <Education education={frontmatter.superiorEducation} />
         </Panel>
 
-        <Panel>
-          <Title>Music business experience</Title>
-          <PanelContent>
-            <Music items={frontmatter.other[0].items} />
-          </PanelContent>
+        <Panel title="Music business experience">
+          <Music items={frontmatter.other[0].items} />
         </Panel>
 
-        <Panel>
-          <Title>Skills</Title>
-          <PanelContent>
-            <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
-          </PanelContent>
+        <Panel title="Skills">
+          <Skills skills={frontmatter.skills} mainColor={frontmatter.mainColor}/>
         </Panel>
 
-        <Panel last>
-          <Title>Contact me</Title>
-          <PanelContent>
-            <Form />
-          </PanelContent>
+        <Panel title="Contact me" last>
+          <Form />
         </Panel>
 
     </MainContainer>
