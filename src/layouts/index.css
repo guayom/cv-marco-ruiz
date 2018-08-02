@@ -638,19 +638,19 @@ label {
 .cta {
   border: 0;
   border-radius: 5px;
-  background: #bbb549;
+  background: #b68632;
   color: #fff;
   display: block;
   text-decoration: none;
   text-align: center;
   padding: 0.3em;
   min-width: 200px;
-  transition: all .5s ease;
+  transition: all .1s;
   cursor:pointer;
 }
 .cta:hover {
-  background: #8c8836;
-  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   cursor:pointer;
 }
 

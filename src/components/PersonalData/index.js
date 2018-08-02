@@ -2,7 +2,6 @@ import React from 'react'
 import ProfilePic from './profilePic'
 import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
-import LevelBar from '../LevelBar'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const PersonalInfo = styled.div`
@@ -11,14 +10,14 @@ const PersonalInfo = styled.div`
   padding: 30px;
 
   h1 {
-    font-size: 37px;
+    font-size: 30px;
     margin-bottom: 5px;
     margin-top: 1em;
     text-transform: uppercase;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 22px;
     margin-bottom: 1em;
     font-weight: 400;
   }

@@ -8,8 +8,8 @@ const ImageContainer = styled.div`
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
 `
 
 const NameContainer = styled.div`
