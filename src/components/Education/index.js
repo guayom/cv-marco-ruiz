@@ -1,5 +1,5 @@
 import React from 'react'
-import {Item, Title, Institution, Year, Description} from './styles'
+import Timeline from '../Timeline';
 
 function Education({education}){
   if(!education) {
@@ -11,12 +11,14 @@ function Education({education}){
     return (
       <div>
         {sortedEducation.map((e, i) => (
-          <Item key={i}>
-            <Year>{e.startingYear}-{e.finishingYear}</Year>
-            <Title>{e.description}</Title>
-            <Institution>{e.institution}</Institution>
-            <Description>{e.degree}</Description>
-          </Item>
+          <Timeline
+            key={i}
+            start={e.startingYear}
+            end={e.finishingYear}
+            subtitle={e.degree}
+            last={i === sortedEducation.length - 1}
+            items={[e.institution]}
+          />
         ))}
       </div>
     )
