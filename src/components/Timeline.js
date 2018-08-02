@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import breakpoint from 'styled-components-breakpoint'
 
 const ItemContainer = styled.div`
+  margin-bottom: 30px;
   ${breakpoint('tablet')`
     display: grid;
     grid-template-columns: 2fr 5fr;
+    margin-bottom: 0;
   `}
 `
 
@@ -47,6 +49,10 @@ const Title = styled.h3`
   font-size: 16px;
   margin: 0;
   text-transform: uppercase;
+
+  ${ breakpoint('tablet')`
+    margin-bottom: 0px;
+  `}
 `
 
 const SubTitle = styled.p`
