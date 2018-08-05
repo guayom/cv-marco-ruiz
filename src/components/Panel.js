@@ -18,9 +18,15 @@ const PanelContainer = styled.div`
   `}
 
   @media print {
-    box-shadow: 0;
+    box-shadow: none;
     border-radius: 0;
     margin: 0;
+    grid-area: ${props => props.id};
+    ${props => props.id === "skills" ? "border-left: solid 1px;" : null}
+
+    * {
+      line-height: 14px;
+    }
   }
 `
 
@@ -34,7 +40,7 @@ const Title = styled.h2`
 
   @media print {
     font-size: 12px;
-    padding: 5px 30x;
+    padding: 5px 30px;
   }
 `
 

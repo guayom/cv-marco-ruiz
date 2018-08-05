@@ -672,5 +672,6 @@ label {
 @media print {
   body {
     font-size: 12px;
+    background: #fff;
   }
 }

@@ -37,6 +37,7 @@ const PersonalInfo = styled.div`
 
     @media print {
       margin-bottom: 0;
+      line-height: 17px;
     }
   }
 
@@ -54,9 +55,9 @@ const PersonalInfo = styled.div`
     position: static;
     background: #f0f0f0;
     width: 100%;
-    padding: 15px 30px;
+    padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 120px 6fr;
     grid-column-gap: 20px;
     height: auto;
     font-size: 12px;
@@ -98,6 +99,15 @@ const InfoContainer = styled.div`
   }
 `
 
+const LinkToCv = styled.div`
+  display: none;
+
+  @media print {
+    display: block;
+    font-weight: bold;
+  }
+`
+
 const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers, languages, address, dateOfBirth, id}) => {
   return (
     <PersonalInfo>
@@ -113,6 +123,9 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
           <AnchorLink href='#contact' className="cta">Contact Me</AnchorLink>
           <p>{email}</p>
           <p>{phoneNumbers}</p>
+          <LinkToCv>
+            <p>Please visit my online resume at: http://bit.ly/emena</p>
+          </LinkToCv>
         </div>
 
         <DataList>

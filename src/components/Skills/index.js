@@ -11,6 +11,10 @@ const Grid = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  @media print {
+    display: block;
+  }
 `
 
 const GridChild = styled.div`
@@ -23,6 +27,14 @@ const GridChild = styled.div`
       flex-basis: 48%;
       max-width: 48%;
     `}
+
+  @media print {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 5px;
+  }
 `
 
 const LevelContainer = styled.div`
@@ -33,6 +45,14 @@ const LevelContainer = styled.div`
   display: flex;
   border-radius: 4px;
   overflow: hidden;
+
+  @media print {
+    display: block;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    height: auto;
+  }
 `
 
 const Level = styled.div`
@@ -57,6 +77,10 @@ const Level = styled.div`
       font-size: 12px;
     }
   `}
+
+  @media print {
+    display: none;
+  }
 `
 
 const Title = styled.div`
@@ -70,6 +94,13 @@ const Title = styled.div`
   color: #fff;
   font-size: 16px;
   align-items: center;
+
+  @media print {
+    color: inherit;
+    position: static;
+    padding: 0;
+    font-size: 12px;
+  }
 `
 
 const Mask = styled.div`
@@ -77,6 +108,10 @@ const Mask = styled.div`
   background: #f0f0f0;
   flex: 1 1;
   box-shadow: inset 2px 2px 8px 0px rgba(0,0,0,0.3);
+
+  @media print {
+    display: none;
+  }
 `
 
 function Skills({ skills, mainColor }) {

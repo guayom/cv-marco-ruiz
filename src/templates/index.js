@@ -29,6 +29,16 @@ const PanelsContainer = styled.div`
   @media print {
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+      "about skills"
+      "work  skills"
+      "education  skills";
+
+    #contact {
+      display: none;
+    }
   }
 `
 
@@ -95,10 +105,6 @@ export default function Template({
 
         <Panel title="Superior education" id="education">
           <Education education={frontmatter.superiorEducation} />
-        </Panel>
-
-        <Panel title="Music business experience" id="music">
-          <Music items={frontmatter.other[0].items} />
         </Panel>
 
         <Panel title="Skills" id="skills">

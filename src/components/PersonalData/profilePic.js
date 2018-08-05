@@ -15,6 +15,8 @@ const ImageContainer = styled.div`
         width: 100%;
         height: auto;
         margin: 0;
+        width: 120px;
+        height: 120px;
     }
 `
 
