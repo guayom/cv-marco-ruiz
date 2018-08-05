@@ -38,6 +38,10 @@ const Menu = styled.nav`
       font-size: 14px;
     }
   `}
+
+  @media print {
+    display: none;
+  }
 `
 
 class Navigation extends React.Component {

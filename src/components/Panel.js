@@ -16,6 +16,12 @@ const PanelContainer = styled.div`
   ${breakpoint('tablet')`
     margin-bottom: ${props => props.last ? 0 : `10px`};
   `}
+
+  @media print {
+    box-shadow: 0;
+    border-radius: 0;
+    margin: 0;
+  }
 `
 
 const Title = styled.h2`
@@ -25,6 +31,11 @@ const Title = styled.h2`
   background: #464650;
   padding: 10px 30px;
   color: #fff;
+
+  @media print {
+    font-size: 12px;
+    padding: 5px 30x;
+  }
 `
 
 const PanelContent = styled.div`
@@ -35,6 +46,15 @@ const PanelContent = styled.div`
   letter-spacing: .05em;
   font-weight: 300;
   padding: 30px;
+
+  @media print {
+    font-size: 11px;
+    padding: 15px 30px;
+
+    p {
+      margin-bottom: 3px;
+    }
+  }
 `
 
 const Panel = ({title, children, last, id}) => (

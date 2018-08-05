@@ -10,6 +10,12 @@ const ImageContainer = styled.div`
     overflow: hidden;
     width: 160px;
     height: 160px;
+
+    @media print {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
 `
 
 const NameContainer = styled.div`

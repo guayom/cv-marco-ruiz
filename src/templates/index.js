@@ -25,6 +25,11 @@ const PanelsContainer = styled.div`
     margin-left: 350px;
     padding: 65px 60px 30px 30px;
   `}
+
+  @media print {
+    margin: 0;
+    padding: 0;
+  }
 `
 
 const Objective = styled.div`
@@ -36,6 +41,17 @@ const Objective = styled.div`
 
   strong {
     display: block;
+  }
+
+  @media print {
+    background: transparent;
+    margin: 0 0 3px 0;
+    font-size: 12px;
+    padding: 0;
+
+    strong {
+      display: inline;
+    }
   }
 `
 
