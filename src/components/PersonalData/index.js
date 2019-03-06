@@ -67,6 +67,7 @@ const PersonalData = ({mainColor, mainImage, name, jobTitle, email, phoneNumbers
       <br/>
       {languages.map(language =>
         <LevelBar
+          key={language.title}
           label={language.title}
           level={language.level}
           levelText={language.levelText}
