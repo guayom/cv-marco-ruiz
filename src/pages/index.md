@@ -55,11 +55,12 @@ workExperience:
 
   - startingYear: 2013
     finishingYear: 2016
-    jobTitle: Front-end web developer & graphic designer
+    jobTitle: Fullstack developer & graphic designer
     company: Freelancer
     address: San José, Costa Rica
     responsibilities:
-      - Designed and developed websites for small companies
+      - During this period I developed mainly Ruby On Rails websites for small companies.
+      - Helped small businesses grow trhough development of internal tools using Ruby and Ruby On Rails
 
   - startingYear: 2016
     finishingYear: 2018
@@ -89,8 +90,10 @@ languages:
 
 skills:
   - title: React
-    level: 80
-  - title: Gatsby
+    level: 90
+  - title: Ruby on rails
+    level: 90
+  - title: Ruby
     level: 90
   - title: Javascript
     level: 90
@@ -98,10 +101,12 @@ skills:
     level: 100
   - title: Css
     level: 100
+  - title: Gatsby
+    level: 90
   - title: Git
     level: 90
   - title: VIM
-    level: 50
+    level: 80
   - title: Node JS
     level: 80
   - title: Hugo
@@ -112,11 +117,7 @@ skills:
     level: 90
   - title: Google Tag Manager
     level: 80
-  - title: Ruby
-    level: 90
-  - title: Ruby on rails
-    level: 80
 
 mainColor: "#434b55"
 ---
-Help businesses grow through the development of highly performing websites
+Help businesses grow through the development of highly performing websites built with cutting edge technologies like React, Ruby on Rails and static site generators like Gatsby and Eleventy.
