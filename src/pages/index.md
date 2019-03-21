@@ -60,7 +60,7 @@ workExperience:
     address: San José, Costa Rica
     responsibilities:
       - During this period I developed mainly Ruby On Rails websites for small companies.
-      - Helped small businesses grow trhough development of internal tools using Ruby and Ruby On Rails
+      - Helped small businesses grow through development of internal tools using Ruby and Ruby On Rails
 
   - startingYear: 2016
     finishingYear: 2018
@@ -120,4 +120,4 @@ skills:
 
 mainColor: "#434b55"
 ---
-Help businesses grow through the development of highly performing websites built with cutting edge technologies like React, Ruby on Rails and static site generators like Gatsby and Eleventy.
+Help businesses grow through the development of highly performing websites built with cutting edge technologies like **React**, **Ruby on Rails** and static site generators like **Gatsby** and **Eleventy**.
